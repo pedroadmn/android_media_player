@@ -19,17 +19,29 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.pix_mu_01a_new_day_begins);
 
         Button btnPlay = findViewById(R.id.btnPlay);
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playSound(view);
-            }
-        });
+        Button btnPause = findViewById(R.id.btnPause);
+        Button btnStop = findViewById(R.id.btnStop);
+        btnPlay.setOnClickListener(this::playSound);
+        btnPause.setOnClickListener(this::pauseSound);
+        btnStop.setOnClickListener(this::stopSound);
     }
 
     public void playSound(View view) {
         if (mediaPlayer != null) {
             mediaPlayer.start();
+        }
+    }
+
+    public void pauseSound(View view) {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+        }
+    }
+
+    public void stopSound(View view) {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.pix_mu_01a_new_day_begins);
         }
     }
 }
