@@ -57,4 +57,12 @@
         app:layout_constraintStart_toEndOf="@+id/btnPause"
         app:layout_constraintTop_toBottomOf="@+id/seekVolume" />
 
+    <Button
+        android:id="@+id/btnGoToVideoPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:text="Go to Video Player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

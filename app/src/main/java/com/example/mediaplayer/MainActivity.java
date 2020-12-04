@@ -3,6 +3,7 @@ package com.example.mediaplayer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -26,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
         Button btnPlay = findViewById(R.id.btnPlay);
         Button btnPause = findViewById(R.id.btnPause);
         Button btnStop = findViewById(R.id.btnStop);
+        Button btnGoToVideoPlayer = findViewById(R.id.btnGoToVideoPlayer);
         btnPlay.setOnClickListener(view -> playSound());
         btnPause.setOnClickListener(view -> pauseSound());
         btnStop.setOnClickListener(view -> stopSound());
+        btnGoToVideoPlayer.setOnClickListener(view -> goGoVideoPlayerScreen());
 
         initVolumeSeekBar();
     }
@@ -78,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
             mediaPlayer.stop();
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.pix_mu_01a_new_day_begins);
         }
+    }
+
+    public void goGoVideoPlayerScreen() {
+        startActivity(new Intent(this, VideoPlayerActivity.class));
     }
 
     @Override
