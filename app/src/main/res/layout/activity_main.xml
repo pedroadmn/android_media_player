@@ -58,6 +58,24 @@
         app:layout_constraintTop_toBottomOf="@+id/seekVolume" />
 
     <Button
+        android:id="@+id/btnGoToMyNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:text="Go to My Notes"
+        app:layout_constraintEnd_toEndOf="@+id/btnGoToVideoPlayer"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToUserPreferences" />
+
+    <Button
+        android:id="@+id/btnGoToUserPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:text="Go to User Preferences"
+        app:layout_constraintEnd_toEndOf="@+id/btnGoToVideoPlayer"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToVideoPlayer" />
+
+    <Button
         android:id="@+id/btnGoToVideoPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

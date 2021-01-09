@@ -28,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
         Button btnPause = findViewById(R.id.btnPause);
         Button btnStop = findViewById(R.id.btnStop);
         Button btnGoToVideoPlayer = findViewById(R.id.btnGoToVideoPlayer);
+        Button btnGoToUserPreferences = findViewById(R.id.btnGoToUserPreferences);
+        Button btnGoToMyNotes= findViewById(R.id.btnGoToMyNotes);
         btnPlay.setOnClickListener(view -> playSound());
         btnPause.setOnClickListener(view -> pauseSound());
         btnStop.setOnClickListener(view -> stopSound());
         btnGoToVideoPlayer.setOnClickListener(view -> goGoVideoPlayerScreen());
+        btnGoToUserPreferences.setOnClickListener(view -> goGoUserPreferencesScreen());
+        btnGoToMyNotes.setOnClickListener(view -> goGoMyNotes());
 
         initVolumeSeekBar();
     }
@@ -85,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void goGoVideoPlayerScreen() {
         startActivity(new Intent(this, VideoPlayerActivity.class));
+    }
+
+    public void goGoUserPreferencesScreen() {
+        startActivity(new Intent(this, UserPreferencesActivity.class));
+    }
+
+    public void goGoMyNotes() {
+        startActivity(new Intent(this, MyNotesActivity.class));
     }
 
     @Override

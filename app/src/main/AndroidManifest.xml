@@ -14,6 +14,8 @@
 
         </activity>
         <activity android:name=".VideoPlayerActivity" />
+        <activity android:name=".UserPreferencesActivity" />
+        <activity android:name=".MyNotesActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
