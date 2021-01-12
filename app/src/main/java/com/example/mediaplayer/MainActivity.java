@@ -30,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
         Button btnGoToVideoPlayer = findViewById(R.id.btnGoToVideoPlayer);
         Button btnGoToUserPreferences = findViewById(R.id.btnGoToUserPreferences);
         Button btnGoToMyNotes= findViewById(R.id.btnGoToMyNotes);
+        Button btnGoToSQLite= findViewById(R.id.btnGoToSQLite);
         btnPlay.setOnClickListener(view -> playSound());
         btnPause.setOnClickListener(view -> pauseSound());
         btnStop.setOnClickListener(view -> stopSound());
         btnGoToVideoPlayer.setOnClickListener(view -> goGoVideoPlayerScreen());
         btnGoToUserPreferences.setOnClickListener(view -> goGoUserPreferencesScreen());
         btnGoToMyNotes.setOnClickListener(view -> goGoMyNotes());
+        btnGoToSQLite.setOnClickListener(view -> goToSQLite());
 
         initVolumeSeekBar();
     }
@@ -97,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void goGoMyNotes() {
         startActivity(new Intent(this, MyNotesActivity.class));
+    }
+
+    public void goToSQLite() {
+        startActivity(new Intent(this, SQLiteActivity.class));
     }
 
     @Override

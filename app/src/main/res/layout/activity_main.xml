@@ -58,6 +58,15 @@
         app:layout_constraintTop_toBottomOf="@+id/seekVolume" />
 
     <Button
+        android:id="@+id/btnGoToSQLite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:text="Go to SQLite"
+        app:layout_constraintEnd_toEndOf="@+id/btnGoToMyNotes"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToMyNotes" />
+
+    <Button
         android:id="@+id/btnGoToMyNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
